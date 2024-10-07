@@ -1,0 +1,31 @@
+class Solution {
+    // function should insert the data to the front of the list
+    static Node insert(Node head, int data) {
+        // Code Here.
+        Node newNode = new Node(data);
+        if(head == null) {
+            head = newNode;
+            return head;
+            
+        }
+        newNode.npx = head;
+        head = newNode;
+        return head;
+    }
+
+    // function to print the linked list
+    static ArrayList<Integer> getList(Node head) {
+        // Code Here.
+        
+        ArrayList<Integer> ans = new ArrayList<>();
+        
+        while(head!=null){
+            ans.add(head.data);
+            
+            head = head.npx;
+        }
+        
+        return ans;
+        
+    }
+}
